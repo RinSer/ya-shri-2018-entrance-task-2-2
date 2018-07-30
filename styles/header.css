@@ -1,0 +1,66 @@
+@media screen and (min-width: 768px) {
+    div#header {
+        border-bottom: 1px solid #f7f7f7;
+    }
+    
+    div#header ul {
+        list-style: none;
+        display: table-row;
+    }
+    
+    div#header ul li {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 2rem;
+    }
+    
+    div#header ul li img {
+        vertical-align: bottom;
+        padding: 1.5rem 1rem 1.5rem 2rem;
+    }
+    
+    div#header ul li a {
+        display: table-cell;
+        vertical-align: middle;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 700;
+        opacity: 0.5;
+    }
+    
+    div#header ul li a.active {
+        opacity: 1;
+    }
+    
+    div#header ul li a:hover {
+        color: red;
+    }
+
+    div.mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul.desktop {
+        display: none;
+    }
+
+    div.mobile {
+        display: block;
+        height: 25px;
+        background: url("../assets/logo.svg") no-repeat left;
+        background-size: auto 20px;
+        margin-left: 7px;
+    }
+
+    div.burger {
+        height: 20px;
+        width: 20px;
+        background: url("../assets/burger.svg") no-repeat left;
+        float: right;
+        margin-right: 5px;
+        margin-top: 3px;
+        cursor: pointer;
+    }
+}
