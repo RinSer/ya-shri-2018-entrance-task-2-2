@@ -14,6 +14,7 @@ export const headerHtml = `
     </li>
 </ul>
 <div class="mobile">
-    <div class="burger"></div>
+    <div id="burger"></div>
 </div>
+<ul id="mobnav"></ul>
 `;

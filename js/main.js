@@ -1,12 +1,16 @@
 import { headerHtml } from '../templates/header.js';
 import { footerHtml } from '../templates/footer.js';
+import { addMobMenu } from './mobheader.js';
 
 (function() {
 
-    let header = document.getElementById('header');
+    var header = document.getElementById('header');
     if (header) header.innerHTML = headerHtml;
 
-    let footer = document.getElementById('footer');
+    var footer = document.getElementById('footer');
     if (footer) footer.innerHTML = footerHtml;
+    
+    // Add mob menu and listen for it to open
+    if (window.innerWidth < 768) addMobMenu();
 
 })();

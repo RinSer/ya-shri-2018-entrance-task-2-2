@@ -47,20 +47,52 @@
     }
 
     div.mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: block;
-        height: 25px;
+        height: 50px;
         background: url("../assets/logo.svg") no-repeat left;
-        background-size: auto 20px;
-        margin-left: 7px;
+        background-size: auto 40px;
+        margin-left: 15px;
     }
 
-    div.burger {
-        height: 20px;
-        width: 20px;
+    div#burger {
+        height: 40px;
+        width: 40px;
         background: url("../assets/burger.svg") no-repeat left;
         float: right;
-        margin-right: 5px;
-        margin-top: 3px;
+        margin-right: 10px;
+        margin-top: 5px;
         cursor: pointer;
+    }
+
+    ul#mobnav {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: none;
+        border-top: 1px solid #f7f7f7;
+        border-bottom: 1px solid #f7f7f7;
+        list-style: none;
+        padding: 50px 0 20px 0;
+        text-align: center;
+    }
+
+    ul#mobnav li {
+        margin-bottom: 30px;
+    }
+
+    ul#mobnav li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        opacity: 0.5;
+    }
+
+    ul#mobnav li a.active {
+        opacity: 1;
     }
 }
