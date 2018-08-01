@@ -5,10 +5,82 @@
     color: #333;
     margin: 0;
     padding: 0;
+    z-index: 0;
 }
 
 div.content {
     height: 100vh;
     width: 100vw;
     position: relative;
+}
+
+h1 {
+    margin: 12px 0 6px 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+        /* Container */
+        div#container {
+            height: calc(100% - 106px);
+        }
+    
+        /* Main */
+        div#main {
+            height: 70%;
+            width: 50%;
+            border: 1px solid red;
+            float: left;
+        }
+        /* Scenarios */
+        div#scenarios {
+            height: 70%;
+            width: 50%;
+            border: 1px solid blue;
+            float: left;
+        }
+
+        /* Devices */
+        div#devices {
+            height: 30%;
+            width: 100%;
+            border: 1px solid black;
+            clear: both;
+        }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* Container */
+    div#container {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        height: calc(100% - 40px);
+        width: 100%;
+    }
+
+    /* Main */
+    div#main {
+        height: 50%;
+        width: 100%;
+        border: 1px solid red;
+        float: left;
+    }
+    /* Scenarios */
+    div#scenarios {
+        height: 25%;
+        width: 100%;
+        border: 1px solid blue;
+        float: left;
+    }
+
+    /* Devices */
+    div#devices {
+        height: 25%;
+        width: 100%;
+        border: 1px solid black;
+        clear: both;
+    }
 }

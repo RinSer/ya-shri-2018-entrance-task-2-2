@@ -10,7 +10,15 @@ import { addMobMenu } from './mobheader.js';
     var footer = document.getElementById('footer');
     if (footer) footer.innerHTML = footerHtml;
     
-    // Add mob menu and listen for it to open
-    if (window.innerWidth < 768) addMobMenu();
+    checkMobMenu();
 
+    window.addEventListener('resize', checkMobMenu);
+
+    function checkMobMenu() {
+        // Close mob menu on resize
+        if (window.innerWidth > 767) 
+            document.getElementById('mobnav')
+                .style.display = 'none';
+        else addMobMenu();
+    }
 })();

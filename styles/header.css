@@ -11,12 +11,13 @@
     div#header ul li {
         display: table-cell;
         vertical-align: middle;
-        padding-left: 2rem;
+        padding-left: 20px;
     }
     
     div#header ul li img {
         vertical-align: bottom;
-        padding: 1.5rem 1rem 1.5rem 2rem;
+        max-height: 30px;
+        margin: 15px 20px 15px 0;
     }
     
     div#header ul li a {
@@ -41,7 +42,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     ul.desktop {
         display: none;
     }
@@ -52,25 +53,24 @@
         left: 0;
         width: 100%;
         display: block;
-        height: 50px;
+        height: 40px;
         background: url("../assets/logo.svg") no-repeat left;
-        background-size: auto 40px;
+        background-size: auto 30px;
         margin-left: 15px;
     }
 
     div#burger {
         height: 40px;
         width: 40px;
+        margin-right: 5px;
         background: url("../assets/burger.svg") no-repeat left;
         float: right;
-        margin-right: 10px;
-        margin-top: 5px;
         cursor: pointer;
     }
 
     ul#mobnav {
         position: fixed;
-        top: 50px;
+        top: 40px;
         left: 0;
         width: 100%;
         display: none;
@@ -79,6 +79,8 @@
         list-style: none;
         padding: 50px 0 20px 0;
         text-align: center;
+        background-color: white;
+        z-index: 3;
     }
 
     ul#mobnav li {
@@ -90,6 +92,10 @@
         font-size: 1.5rem;
         font-weight: 700;
         opacity: 0.5;
+    }
+
+    ul#mobnav li a:active {
+        color: red;
     }
 
     ul#mobnav li a.active {
