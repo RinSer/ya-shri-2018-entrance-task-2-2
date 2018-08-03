@@ -1,0 +1,114 @@
+div#main #widget {
+    height: 88%;
+    width: 95%;
+    margin: auto auto;
+    border-radius: 20px;
+    padding: 15px 15px 0 15px;
+    background: url("../assets/mainbg.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.main-info {
+    float: left;
+}
+
+.main-info h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-info p {
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+.weather {
+    width: 30%;
+    margin-top: 5%;
+    font-size: 0.6rem;
+    float: left;
+}
+
+.weather2 {
+    width: 70%
+}
+
+.weather span {
+    color: #858585;
+}
+
+.weather h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.cloud {
+    background: url("../assets/cloud-drizzle.png") no-repeat 4rem;
+    padding-right: 20px;
+    background-size: 20px auto;
+}
+
+#schedule {
+    float: left;
+    overflow: auto;
+}
+
+#schedule::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#schedule .tile {
+    height: 35%;
+    margin-bottom: 15px;
+}
+
+#widget img {
+    position: absolute;
+    bottom: 0;
+    right: 21%;
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .main-info {
+        width: 60%;
+    }
+
+    #schedule {
+        width: 40%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #widget img {
+        display: none;
+    }
+    
+    .main-info {
+        width: 100%;
+        height: 50%;
+    }
+
+    #schedule {
+        min-width: 100%;
+        height: 50%;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    #schedule .tile {
+        height: 100%;
+        width: 45%;
+        margin-right: 5%;
+        margin-bottom: 0;
+    }
+
+    .weather {
+        margin-top: 5px;
+    }
+}
