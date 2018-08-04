@@ -1,22 +1,17 @@
-div#scenarios #sce-container {
+#sce-container {
     height: 90%;
-    width: 95%;
+    width: calc(100% - 15px);
+    margin-left: 15px;
+    margin-right: 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin: auto auto;
     overflow-x: scroll;
-    border: 1px solid yellow;
 }
 
 div#sce-container::-webkit-scrollbar {
     width: 0;
     background: transparent;
-}
-
-#sce-container .tile {
-    width: 32%;
-    height: 31.5%;
-    margin: 0 1% 1% 0;
 }
 
 div#scenarios #sce-arrows {
@@ -36,4 +31,36 @@ div#scenarios #sce-arrows span:hover {
     font-size: 1.5rem;
     margin-left: 5px;
     opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    #sce-container .tile {
+        width: 30%;
+        max-height: 29%;
+        margin: 0 15px 15px 0;
+        flex: 1 1 29%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #sce-arrows {
+        display: none!important;
+    }
+    
+    #sce-container {
+        width: 100%;
+        height: 80%;
+        padding: 5px 0;
+        margin: 0;
+        display: block;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+    
+    #sce-container .tile {
+        height: 100%;
+        width: 40%;
+        margin: 0 0 0 15px;
+    }
 }

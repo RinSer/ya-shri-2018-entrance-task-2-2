@@ -1,12 +1,19 @@
 import { isMobile } from './utils.js';
+import { addMainScroll } from './main.js';
+import { addScenariosScroll } from './scenarios.js';
+import { addDevicesScroll } from './devices.js';
 /**
  * Добавляет функционал мобильного меню
  */
-export function checkMobMenu() {
+export function checkMobileSize() {
     // Close mob menu on resize
-    if (!isMobile()) 
+    if (!isMobile()) {
         document.getElementById('mobnav')
             .style.display = 'none';
+        addMainScroll();
+        addScenariosScroll();
+        addDevicesScroll();
+    }
     else addMobMenu();
 }
 
@@ -20,7 +27,7 @@ function addMobMenu() {
     mobnav.removeChild(logo);
     // Следим за прикосновениями к бургеру
     var burger = document.getElementById('burger');
-    if (!burger.onclick)
+    if (burger && !burger.onclick)
         burger.onclick = toggleMenu;
     
     function toggleMenu() {

@@ -6,7 +6,7 @@ import { generateMain } from './main.js';
 import { generateScenarios } from './scenarios.js';
 import { generateDevices } from './devices.js';
 // functions import
-import { checkMobMenu } from './mobmenu.js';
+import { checkMobileSize } from './mobile.js';
 
 (function() {
     // Load header and footer templates
@@ -20,13 +20,13 @@ import { checkMobMenu } from './mobmenu.js';
     generateMain(5);
 
     // Load scenarios block
-    generateScenarios(3);
+    generateScenarios(7);
 
     // Load devices block
     generateDevices();
 
     // Add mobile menu if necessary
-    checkMobMenu();
+    checkMobileSize();
     // Remove or add mobile menu on screen resize
-    window.addEventListener('resize', checkMobMenu);
+    window.addEventListener('resize', checkMobileSize);
 })();

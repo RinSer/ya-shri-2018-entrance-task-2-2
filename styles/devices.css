@@ -60,12 +60,15 @@ div#dev-container .tile {
     height: 100%;
     width: 20%;
     margin-left: 15px;
-    white-space: normal;
 }
 
 @media screen and (max-width: 767px) {
     .filter p {
         display: none;
+    }
+
+    #arrows {
+        display: none!important;
     }
 
     div#devices p.active {
@@ -74,6 +77,10 @@ div#dev-container .tile {
 
     div#devices p.active:hover div#devices p {
         display: block;
+    }
+
+    div#dev-container {
+        height: 80%;
     }
 
     div#dev-container .tile {
