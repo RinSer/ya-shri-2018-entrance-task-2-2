@@ -3,6 +3,7 @@ import { headerHtml } from '../templates/header.js';
 import { footerHtml } from '../templates/footer.js';
 // data blocks import
 import { generateMain } from './main.js';
+import { generateScenarios } from './scenarios.js';
 import { generateDevices } from './devices.js';
 // functions import
 import { checkMobMenu } from './mobmenu.js';
@@ -17,6 +18,9 @@ import { checkMobMenu } from './mobmenu.js';
 
     // Load main block
     generateMain(5);
+
+    // Load scenarios block
+    generateScenarios(3);
 
     // Load devices block
     generateDevices();

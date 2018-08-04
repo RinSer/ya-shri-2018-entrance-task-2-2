@@ -1,8 +1,22 @@
 div#scenarios #sce-container {
     height: 90%;
     width: 95%;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto auto;
+    overflow-x: scroll;
     border: 1px solid yellow;
+}
+
+div#sce-container::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#sce-container .tile {
+    width: 32%;
+    height: 31.5%;
+    margin: 0 1% 1% 0;
 }
 
 div#scenarios #sce-arrows {
