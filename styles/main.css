@@ -1,5 +1,5 @@
-div#main #widget {
-    height: 90%;
+#widget {
+    height: 88%;
     width: 95%;
     margin: auto auto;
     border-radius: 20px;
@@ -91,6 +91,10 @@ div#main #widget {
 }
 
 @media screen and (max-width: 767px) {
+    #widget {
+        height: 100%;
+    }
+    
     #widget img {
         display: none;
     }

@@ -1,5 +1,5 @@
 export const mainHtml = `
-<h1>Главное</h1>
+<h1 class="mobhide">Главное</h1>
 <div id="widget">
     <div class="main-info">
         <h2>Привет, Геннадий!</h1>

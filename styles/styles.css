@@ -51,6 +51,10 @@ h1 {
     * {
         font-size: 16px;
     }
+
+    .mobhide {
+        display: none;
+    }
     
     /* Container */
     div#container {

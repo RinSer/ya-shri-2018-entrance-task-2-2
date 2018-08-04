@@ -36,9 +36,9 @@ div#scenarios #sce-arrows span:hover {
 @media screen and (min-width: 768px) {
     #sce-container .tile {
         width: 30%;
-        max-height: 29%;
+        max-height: 27%;
         margin: 0 15px 15px 0;
-        flex: 1 1 29%;
+        flex: 1 1 27%;
     }
 }
 
