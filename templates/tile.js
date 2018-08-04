@@ -1,8 +1,10 @@
-export const tileHtml = `
-    <div class="tile one-tile">
+export function tileHtml(tileInfo) {
+    return `
+    <div class="tile">
         <div class="tile-info">
-            <h1>Xiaomi Yeelight LED Smart Bulb</h1>
-            <p>Включится в 17:00</p>
+            <h1>${tileInfo.title}</h1>
+            <p>${tileInfo.message}</p>
         </div>
-    </div>
-`;
+    </div>`;
+}
+

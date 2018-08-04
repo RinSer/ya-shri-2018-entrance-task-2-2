@@ -1,0 +1,25 @@
+div#scenarios #sce-container {
+    height: 90%;
+    width: 95%;
+    margin: auto auto;
+    border: 1px solid yellow;
+}
+
+div#scenarios #sce-arrows {
+    float: right;
+    margin: 7px 20px 0 0;
+    display: none;
+}
+
+div#scenarios #sce-arrows span {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+div#scenarios #sce-arrows span:hover {
+    font-size: 1.5rem;
+    margin-left: 5px;
+    opacity: 1;
+}

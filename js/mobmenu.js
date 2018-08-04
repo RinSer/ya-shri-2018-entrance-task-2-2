@@ -1,7 +1,16 @@
+import { isMobile } from './utils.js';
 /**
  * Добавляет функционал мобильного меню
  */
-export function addMobMenu() {
+export function checkMobMenu() {
+    // Close mob menu on resize
+    if (!isMobile()) 
+        document.getElementById('mobnav')
+            .style.display = 'none';
+    else addMobMenu();
+}
+
+function addMobMenu() {
     // Находим меню и мобильное меню
     var nav = document.getElementsByClassName('desktop')[0];
     var mobnav = document.getElementById('mobnav');

@@ -4,7 +4,7 @@ div#devices h1 {
 
 div#devices #arrows {
     float: right;
-    margin: 5px 20px 0 0;
+    margin: 7px 20px 0 0;
     display: none;
 }
 
@@ -21,6 +21,10 @@ div#devices #arrows span:hover {
     opacity: 1;
 }
 
+.filter {
+    display: inline-flex;
+}
+
 .filter p {
     display: inline-block;
     border-radius: 20px;
@@ -32,8 +36,8 @@ div#devices #arrows span:hover {
     cursor: pointer;
 }
 
-.filter {
-    display: inline-flex;
+.filter p:hover {
+    color: red;
 }
 
 div#devices p.active {
@@ -42,6 +46,7 @@ div#devices p.active {
 
 div#dev-container {
     height: 75%;
+    padding: 5px 0;
     overflow-y: hidden;
     white-space: nowrap;
 }
@@ -59,7 +64,7 @@ div#dev-container .tile {
 }
 
 @media screen and (max-width: 767px) {
-    div#devices p {
+    .filter p {
         display: none;
     }
 

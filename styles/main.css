@@ -1,5 +1,5 @@
 div#main #widget {
-    height: 88%;
+    height: 90%;
     width: 95%;
     margin: auto auto;
     border-radius: 20px;
@@ -62,6 +62,7 @@ div#main #widget {
 
 #schedule .tile {
     height: 35%;
+    width: 100%;
     margin-bottom: 15px;
 }
 
@@ -106,6 +107,7 @@ div#main #widget {
         width: 45%;
         margin-right: 5%;
         margin-bottom: 0;
+        white-space: normal;
     }
 
     .weather {
