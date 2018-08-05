@@ -9,15 +9,15 @@ export function generateModal() {
         var button = document.getElementById('close-modal');
         if (button && !button.onclick)
             button.onclick = function() {
-                modal.style.display = 'none';
+                modal.style.visibility = 'hidden';
             }
         // Find all devices
         var devices = document.getElementById('dev-container')
             .getElementsByClassName('tile');
         for (var device of devices) 
             if (!device.onclick)
-                device.onclick = function() {
-                    modal.style.display = 'block';
+                device.onclick = function($event) {
+                    modal.style.visibility = 'visible';
                 }
     }
 }
