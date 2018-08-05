@@ -9,6 +9,8 @@ export function generateModal() {
         var button = document.getElementById('close-modal');
         if (button && !button.onclick)
             button.onclick = function() {
+                var tile = document.getElementById('modal-tile');
+                if (tile) tile.setAttribute('id', '');
                 modal.style.visibility = 'hidden';
             }
         // Find all devices
@@ -17,7 +19,12 @@ export function generateModal() {
         for (var device of devices) 
             if (!device.onclick)
                 device.onclick = function($event) {
-                    modal.style.visibility = 'visible';
+                    var modalTile = document.getElementById('modal-tile');
+                    if (modalTile) modalTile.setAttribute('id', '');
+                    $event.target.setAttribute('id', 'modal-tile');
+                    setTimeout(function() {
+                        modal.style.visibility = 'visible';
+                    }, 500);
                 }
     }
 }
