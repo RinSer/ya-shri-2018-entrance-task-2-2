@@ -6,7 +6,7 @@ export const devicesHtml = `
     </div>
     <h1>Избранные устройства</h1>
     <div class="filter">
-        <p class="active">Все</p>
+        <p class="active-filter">Все</p>
         <p>Кухня</p>
         <p>Зал</p>
         <p>Лампочки</p>

@@ -40,7 +40,7 @@ div#devices #arrows span:hover {
     color: red;
 }
 
-div#devices p.active {
+div#devices p.active-filter {
     background: #FFD93E;
 }
 
@@ -62,21 +62,23 @@ div#dev-container .tile {
     margin-left: 15px;
 }
 
+@media screen and (min-width: 768px) {
+    .filter p {
+        display: block!important;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .filter p {
         display: none;
     }
 
+    div#devices p.active-filter {
+        display: block;
+    }
+
     #arrows {
         display: none!important;
-    }
-
-    div#devices p.active {
-        display: block;
-    }
-
-    div#devices p.active:hover div#devices p {
-        display: block;
     }
 
     div#dev-container {

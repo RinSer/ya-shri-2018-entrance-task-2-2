@@ -4,7 +4,7 @@ import { footerHtml } from '../templates/footer.js';
 // data blocks import
 import { generateMain } from './main.js';
 import { generateScenarios } from './scenarios.js';
-import { generateDevices } from './devices.js';
+import { generateDevices, addFilter } from './devices.js';
 // functions import
 import { checkMobileSize } from './mobile.js';
 
@@ -24,6 +24,8 @@ import { checkMobileSize } from './mobile.js';
 
     // Load devices block
     generateDevices();
+
+    addFilter();
 
     // Add mobile menu if necessary
     checkMobileSize();

@@ -3,7 +3,7 @@ import { devicesHtml } from '../templates/devices.js';
 // mock data
 import { getDevicesData } from './data.js';
 // utilities
-import { addTile, scrollLeft, scrollRight } from './utils.js';
+import { isMobile, addTile, scrollLeft, scrollRight } from './utils.js';
 
 export function generateDevices(numTiles = 1) {
     // Devices html
@@ -30,5 +30,31 @@ export function addDevicesScroll() {
         var right = document.getElementById('right-dev');
         if (right && !right.onclick)
             right.onclick = scrollRight('dev-container');
+    }
+}
+
+export function addFilter() {
+    var filters = document.getElementsByClassName('filter')[0].getElementsByTagName('p');
+    for (var filter of filters) {
+        if (!filter.onclick)
+            filter.onclick = function($event) {
+                var mfilters = document.getElementsByClassName('filter')[0].getElementsByTagName('p');
+                if ($event.target.classList.contains('active-filter')) {
+                    if (isMobile()) {
+                        for (var mfilter of mfilters)
+                            mfilter.style.display = 'block';
+                        document.getElementsByClassName('active-filter')[0]
+                            .classList.remove('active-filter');
+                    }
+                } else {
+                    var active = document.getElementsByClassName('active-filter')[0];
+                    if (active) active.classList.remove('active-filter');
+                    for (var mfilter of mfilters)
+                        if (mfilter !== $event.target)
+                            mfilter.style.display = 'none';
+                        else mfilter.style.display = 'block';
+                    $event.target.classList.add('active-filter');
+                }
+            }
     }
 }
