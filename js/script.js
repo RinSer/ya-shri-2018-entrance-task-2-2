@@ -5,6 +5,7 @@ import { footerHtml } from '../templates/footer.js';
 import { generateMain } from './main.js';
 import { generateScenarios } from './scenarios.js';
 import { generateDevices, addFilter } from './devices.js';
+import { generateModal } from './modal.js';
 // functions import
 import { checkMobileSize } from './mobile.js';
 
@@ -26,6 +27,9 @@ import { checkMobileSize } from './mobile.js';
     generateDevices();
 
     addFilter();
+
+    // Load modal
+    generateModal();
 
     // Add mobile menu if necessary
     checkMobileSize();

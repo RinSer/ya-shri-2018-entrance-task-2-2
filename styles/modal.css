@@ -1,0 +1,90 @@
+#modal {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+.modal-container .tile {
+    height: 80%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.modal-control {
+    width: 100%;
+    height: 20%;
+}
+
+.modal-control button {
+    width: calc(50% - 10px);
+    height: calc(100% - 20px);
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-control button:hover {
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+}
+
+#execute {
+    color: #000;
+    background-color: #FFD93E;
+}
+
+#execute:hover {
+    color: #333;
+}
+
+#close-modal {
+    color: #333;
+    background-color: #fff;
+    float: right;
+}
+
+#close-modal:hover {
+    color: red;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-container {
+        width: 55%;
+        height: 60%;
+        margin: 70px auto 0 auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal-container {
+        width: 90%;
+        height: 100%;
+        margin: 20px auto;
+    }
+
+    .modal-container .tile {
+        height: calc(75% - 20px);
+    }
+
+    .modal-control {
+        height: calc(25% - 20px);
+        width: 100%;
+    }
+
+    .modal-control button {
+        width: 100%;
+        height: calc(50% - 20px);
+        margin: 15px auto 0 auto;
+    }
+
+    #close-modal {
+        float: none;
+    }
+}

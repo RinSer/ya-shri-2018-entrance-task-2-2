@@ -17,28 +17,10 @@ div.content {
 h1 {
     margin: 12px 0 6px 20px;
     font-size: 1.1rem;
-    font-weight: 700;
-}
-
-#modal {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(51, 51, 51, 0.5);
-    z-index: 10;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
-    /* Modal container */
-    .modal-container {
-        width: 55%;
-        height: 60%;
-        margin: 70px auto 0 auto;
-        border: 2px solid yellow;
-    }
-    
     /* Container */
     div#container {
         height: calc(100% - 106px);
