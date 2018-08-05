@@ -26,5 +26,12 @@ export function generateModal() {
                         modal.style.visibility = 'visible';
                     }, 500);
                 }
+        // Round slider
+        var notch = document.getElementsByClassName('notch')[0];
+        if (notch) {
+            notch.addEventListener('mousedown', function($event) {
+                
+            }, false);
+        }
     }
 }
