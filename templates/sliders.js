@@ -1,9 +1,7 @@
 export var roundSliderHtml = `
-<div class="slider-holder">
-    <div class="round-slider-container">
-        <div class="round-slider">
-            <div class="notch"></div>
-        </div>
+<div class="round-slider-container">
+    <div class="round-slider">
+        <div class="notch"></div>
     </div>
 </div>
 `;
