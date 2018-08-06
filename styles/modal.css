@@ -19,6 +19,17 @@
 }
 
 .modal-container .tile h1 {
+<<<<<<< HEAD
+    font-size: 2.5rem;
+}
+
+.modal-container .tile p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#modal-icon {
+=======
     font-size: 3rem;
 }
 
@@ -28,6 +39,7 @@
 }
 
 .modal-icon {
+>>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81
     float: right;
     font-size: 3rem;
     font-weight: 600;
@@ -36,6 +48,8 @@
     background-size: 3rem auto;
 }
 
+<<<<<<< HEAD
+=======
 .slider-container {
     width: 30%;
     padding-top: 30%;
@@ -64,6 +78,7 @@
     cursor: pointer;
 }
 
+>>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81
 .modal-control {
     width: 100%;
     height: 20%;
@@ -122,6 +137,17 @@
         height: calc(75% - 20px);
     }
 
+<<<<<<< HEAD
+    .modal-container .tile h1 {
+        font-size: 2rem;
+    }
+    
+    .modal-container .tile p {
+        font-size: 1rem;
+    }
+
+=======
+>>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81
     .modal-control {
         height: calc(25% - 20px);
         width: 100%;

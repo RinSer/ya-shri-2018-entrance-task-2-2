@@ -1,0 +1,27 @@
+{
+  "name": "ya-shri-2018-entrance-task-2-2-solution",
+  "version": "0.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "http-server -a localhost -p 7000 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RinSer/ya-shri-2018-entrance-task-2-2.git"
+  },
+  "keywords": [
+    "shri",
+    "yandex"
+  ],
+  "author": "Serjey G Irin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RinSer/ya-shri-2018-entrance-task-2-2/issues"
+  },
+  "homepage": "https://github.com/RinSer/ya-shri-2018-entrance-task-2-2#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

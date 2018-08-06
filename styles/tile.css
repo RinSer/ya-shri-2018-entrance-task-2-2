@@ -30,6 +30,7 @@ div#modal-tile.tile {
 .tile-info {
     position: absolute;
     bottom: 12px;
+    pointer-events: none;
 }
 
 .tile h1 {

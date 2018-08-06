@@ -44,32 +44,38 @@ export function getDevicesData() {
         {
             title: 'Xiaomi Yeelight LED Smart Bulb',
             message: 'Включено',
-            icon: 'assets/icons/sun_yellow.png'
+            icon: 'assets/icons/sun_yellow.png',
+            template: 3
         },
         {
-            title: 'D-Link Omna 180 Cam',
+            title: 'Xiaomi Warm Floor',
             message: 'Включится в 17:00',
-            icon: 'assets/icons/sun_grey.png'
+            icon: 'assets/icons/temperature_yellow.png',
+            template: 0
         },
         {
             title: 'Elgato Eve Degree Connected',
             message: 'Выключено до 17:00',
-            icon: 'assets/icons/temperature_grey.png'
+            icon: 'assets/icons/temperature_grey.png',
+            template: 1
         },
         {
             title: 'LIFX Mini Day & Dusk A60 E27',
             message: 'Включится в 17:00',
-            icon: 'assets/icons/sun_grey.png'
+            icon: 'assets/icons/sun_grey.png',
+            template: 3
         },
         {
             title: 'Xiaomi Mi Air Purifier 2S',
             message: 'Включено',
-            icon: 'assets/icons/sun_yellow.png'
+            icon: 'assets/icons/temperature_yellow.png',
+            template: 0
         },
         {
             title: 'Philips Zhirui',
             message: 'Выключено',
-            icon: 'assets/icons/sun_grey.png'
+            icon: 'assets/icons/temperature_grey.png',
+            template: 1
         }
     ];
 }
