@@ -15,6 +15,7 @@
     width: 100%;
     background-color: #fff;
     transition: none;
+<<<<<<< HEAD
     cursor: default;
 }
 
@@ -76,6 +77,8 @@
     border-bottom-color: #333;
     margin: -10px auto 0 auto;
     cursor: pointer;
+=======
+>>>>>>> parent of ab6845b... round slider begin
 }
 
 >>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81

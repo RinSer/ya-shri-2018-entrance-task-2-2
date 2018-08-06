@@ -1,6 +1,7 @@
 export const modalHtml = `
 <div class="modal-container">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="tile" id="modal-main">
         <span id="modal-icon" class="mobhide"></span>
         <h1 id="modal-title">Xiaomi Warm Floor</h1>
@@ -17,6 +18,9 @@ export const modalHtml = `
         </div>
 >>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81
     </div>
+=======
+    <div class="tile" id="modal-tile"></div>
+>>>>>>> parent of ab6845b... round slider begin
     <div class="modal-control">
         <button id="execute">Применить</button>
         <button id="close-modal">Закрыть</button>

@@ -89,13 +89,6 @@ export function generateModal() {
                         modal.style.visibility = 'visible';
                     }, 500);
                 }
-        // Round slider
-        var notch = document.getElementsByClassName('notch')[0];
-        if (notch) {
-            notch.addEventListener('mousedown', function($event) {
-                
-            }, false);
-        }
     }
 >>>>>>> ab6845b4b78f3df8584a0f85adae818cd8047a81
 }
