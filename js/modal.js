@@ -2,7 +2,7 @@
 import { modalHtml } from '../templates/modal.js';
 import { roundSliderHtml, yellowSliderHtml, rainbowSliderHtml } from '../templates/sliders.js';
 // functions
-import { rotateSlider } from '../js/sliders.js';
+import { rotateSlider, sliderFilter, flipSlider, sliderAction } from '../js/sliders.js';
 
 export function generateModal() {
     // Find all devices and listen for modal to open
@@ -51,10 +51,17 @@ function renderTemplate($event) {
                     var slider = document.getElementsByClassName('round-slider')[0];
                     if (slider) rotateSlider(slider);
                 }
-                if (img.indexOf('sun') > 0)
+                if (img.indexOf('sun') > 0) {
                     modalMain.innerHTML += yellowSliderHtml;
-                if (img.indexOf('temperature_grey') > 0)
+                    sliderFilter();
+                    flipSlider();
+                }
+                if (img.indexOf('temperature_grey') > 0) {
                     modalMain.innerHTML += rainbowSliderHtml;
+                    sliderFilter();
+                    flipSlider();
+                    sliderAction();
+                }
             }
         }
         modal.style.visibility = 'visible';

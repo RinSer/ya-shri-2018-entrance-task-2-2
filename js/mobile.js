@@ -2,6 +2,7 @@ import { isMobile } from './utils.js';
 import { addMainScroll } from './main.js';
 import { addScenariosScroll } from './scenarios.js';
 import { addDevicesScroll } from './devices.js';
+import { flipSlider } from './sliders.js';
 /**
  * Добавляет функционал мобильного меню
  */
@@ -15,6 +16,8 @@ export function checkMobileSize() {
         addDevicesScroll();
     }
     else addMobMenu();
+    // Check slider position if necessary
+    flipSlider();
 }
 
 function addMobMenu() {

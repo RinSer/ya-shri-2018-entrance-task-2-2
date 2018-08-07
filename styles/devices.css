@@ -28,7 +28,7 @@ div#devices #arrows span:hover {
 .filter p {
     display: inline-block;
     border-radius: 20px;
-    font-weight: 700;
+    font-weight: 600;
     margin-left: 10px;
     padding: 3px 10px;
     background-color: #f7f7f7;
@@ -53,6 +53,7 @@ div#dev-container {
 
 div#dev-container::-webkit-scrollbar {
     width: 0;
+    height: 0;
     background: transparent;
 }
 
