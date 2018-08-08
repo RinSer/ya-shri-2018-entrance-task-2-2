@@ -13,9 +13,9 @@ export var yellowSliderHtml = `
     <div id="slider-filter">
         <div class="slider-filter-row">
             <p class="active-slider">Вручную</p>
-            <p>Дневной свет</p>
-            <p>Вечерний свет</p>
-            <p>Рассвет</p>
+            <p data-value="55">Дневной свет</p>
+            <p data-value="25">Вечерний свет</p>
+            <p data-value="85">Рассвет</p>
         </div>
     </div>
     <div class="slider-slider">
@@ -31,9 +31,9 @@ export var rainbowSliderHtml = `
     <div id="slider-filter">
         <div class="slider-filter-row">
             <p class="active-slider">Вручную</p>
-            <p>Холодно</p>
-            <p>Тепло</p>
-            <p>Жарко</p>
+            <p data-value="-5">Холодно</p>
+            <p data-value="20">Тепло</p>
+            <p data-value="28">Жарко</p>
         </div>
     </div>
     <div class="slider-slider">

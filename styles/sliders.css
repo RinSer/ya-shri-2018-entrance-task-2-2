@@ -161,7 +161,6 @@
     padding-top: 100px;
     width: 100px;
     border: 8px solid white;
-    border-radius: 50px;
     background: transparent;
     cursor: pointer;
 }
@@ -170,7 +169,7 @@
     height: 100px;
     width: 100px;
     border: 8px solid white;
-    border-radius: 50px;
+    border-radius: 50%;
     background: transparent;
     cursor: pointer;
 }

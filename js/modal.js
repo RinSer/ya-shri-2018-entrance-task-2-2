@@ -21,6 +21,12 @@ function renderTemplate($event) {
     var button = document.getElementById('close-modal');
     if (button && !button.onclick)
         button.onclick = function() {
+            // Remove slider styles
+            var sheet = document.styleSheets[document.styleSheets.length - 1];
+            var lastRule = sheet.cssRules[sheet.cssRules.length - 1];
+            if (!lastRule.media)
+                sheet.deleteRule(sheet.cssRules.length - 1);
+            // Hide modal
             var tile = document.getElementById('modal-tile');
             if (tile) tile.setAttribute('id', '');
             modal.style.visibility = 'hidden';
@@ -55,12 +61,13 @@ function renderTemplate($event) {
                     modalMain.innerHTML += yellowSliderHtml;
                     sliderFilter();
                     flipSlider();
+                    sliderAction();
                 }
                 if (img.indexOf('temperature_grey') > 0) {
                     modalMain.innerHTML += rainbowSliderHtml;
-                    sliderFilter();
+                    sliderFilter(true);
                     flipSlider();
-                    sliderAction();
+                    sliderAction(true);
                 }
             }
         }
