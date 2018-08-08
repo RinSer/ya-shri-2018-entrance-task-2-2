@@ -3,6 +3,7 @@ import { addMainScroll } from './main.js';
 import { addScenariosScroll } from './scenarios.js';
 import { addDevicesScroll } from './devices.js';
 import { flipSlider } from './sliders.js';
+import { addNotches } from './roundSlider.js';
 /**
  * Добавляет функционал мобильного меню
  */
@@ -18,6 +19,8 @@ export function checkMobileSize() {
     else addMobMenu();
     // Check slider position if necessary
     flipSlider();
+    // Check round slider notches
+    addNotches();
 }
 
 function addMobMenu() {

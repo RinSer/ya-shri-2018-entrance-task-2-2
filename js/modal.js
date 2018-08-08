@@ -2,7 +2,8 @@
 import { modalHtml } from '../templates/modal.js';
 import { roundSliderHtml, yellowSliderHtml, rainbowSliderHtml } from '../templates/sliders.js';
 // functions
-import { rotateSlider, sliderFilter, flipSlider, sliderAction } from '../js/sliders.js';
+import { sliderFilter, flipSlider, sliderAction } from './sliders.js';
+import { rotateSlider, addNotches } from './roundSlider.js';
 
 export function generateModal() {
     // Find all devices and listen for modal to open
@@ -53,6 +54,7 @@ function renderTemplate($event) {
             if (modalMain) {
                 if (img.indexOf('temperature_yellow') > 0) {
                     modalMain.innerHTML += roundSliderHtml;
+                    addNotches();
                     // Round slider action
                     var slider = document.getElementsByClassName('round-slider')[0];
                     if (slider) rotateSlider(slider);

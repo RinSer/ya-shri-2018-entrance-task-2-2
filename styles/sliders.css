@@ -4,19 +4,17 @@
     width: 30%;
     padding-top: 30%;
     margin: 0 auto;
-    border: 1px solid yellow;
     position: relative;
 }
 
-#round-notches {
+.notch {
     position: absolute;
-    top: -5%;
-    left: -5%;
-    width: 110%;
-    height: 110%;
-    border-radius: 50%;
-    border: 1px solid black;
-    border-bottom: 3px solid red;
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    margin-top: -5%;
+    z-index: 5;
+    border-left: 1px solid orange;
 }
 
 .round-slider-skeleton {
@@ -36,9 +34,10 @@
 
 .round-slider {
     background: #FEFEFE;
+    z-index: 13;
 }
 
-.notch {
+#tick {
     width: 20px;
     height: 20px;
     border: 10px solid transparent;
@@ -46,6 +45,13 @@
     border-bottom-color: #333;
     margin: -10px auto 0 auto;
     cursor: pointer;
+}
+
+#tick-tick {
+    width: 1px;
+    height: 20px;
+    margin: -10px auto 0 auto;
+    background: red;
 }
 
 /* Oblong slider */
@@ -161,6 +167,7 @@
     padding-top: 100px;
     width: 100px;
     border: 8px solid white;
+    border-radius: 50%;
     background: transparent;
     cursor: pointer;
 }
@@ -180,7 +187,7 @@
     .round-slider-container {
         width: 60%;
         padding-top: 60%;
-        margin: 10% auto;
+        margin: 30% auto;
     }
 
     /* Oblong slider */
