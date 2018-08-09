@@ -2,9 +2,7 @@ export var roundSliderHtml = `
 <div class="round-slider-container">
     <div class="round-slider-skeleton round-slider-shadow"></div>
     <div class="round-slider-skeleton round-slider">
-        <div id="tick">
-            <div id="tick-tick"></div>
-        </div>
+        <div id="tick"></div>
     </div>
 </div>
 `;

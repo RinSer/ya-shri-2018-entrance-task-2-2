@@ -1,9 +1,7 @@
 export function rotateSlider(target) {
     var R2D, active, angle, center, init, rotate, rotation, start, startAngle, stop;
-    var hasChanged = false;
+    
     active = false;
-  
-    angle = 0;
   
     rotation = 0;
   
@@ -13,6 +11,11 @@ export function rotateSlider(target) {
       x: 0,
       y: 0
     };
+
+    var init_angle = getTransformAngle(target);
+    if (init_angle)
+        angle = init_angle;
+    else angle = 0;
   
     init = function() {
       target.addEventListener("mousedown", start(), false);
@@ -42,7 +45,7 @@ export function rotateSlider(target) {
                 x = e.clientX - center.x;
                 y = e.clientY - center.y;
             }
-            startAngle = R2D * Math.atan2(y, x);
+            startAngle = R2D * Math.atan2(y, x) + 90;
             return active = true;
       }
     };
@@ -59,52 +62,73 @@ export function rotateSlider(target) {
                 x = e.clientX - center.x;
                 y = e.clientY - center.y;
             }
-            d = R2D * Math.atan2(y, x);
+            d = R2D * Math.atan2(y, x) + 90;
             rotation = d - startAngle;
             if (active) {
                 var result = angle + rotation;
-                var initialAngle = target.style.webkitTransform.match(/\d+\.\d+/g);
-                target.style.webkitTransform = "rotate(" + (result) + "deg)";
-                return checkNotches(initialAngle > result);
+                if (result > 136)
+                    result -= 360;
+                if (result < -136)
+                    result += 360;
+                if (result > -136 && result < 136) {
+                    checkNotches();
+                    var iconValue = Math.floor(map(result, -132, 132, 1, 30));
+                    setIconValue(iconValue);
+                    return target.style.webkitTransform = "rotate(" + (result) + "deg)";
+                }
             }
         }
     };
   
     stop = function() {
-      angle += rotation;
-      return active = false;
+        angle = getTransformAngle(target);
+        return active = false;
     };
   
     init();
+
 }
 
-export function addNotches() {
+export function addNotches(iconValue = 23) {
     var container = document
         .getElementsByClassName('round-slider-container')[0];
     if (container) {
+        // Get current position
+        var degree = map(iconValue, 1, 30, -132, 132);
+        var slider = document.getElementsByClassName('round-slider')[0];
+        slider.style.webkitTransform = "rotate(" + (degree) + "deg)";
         // Remove notches if they are
         var notches = container.getElementsByClassName('round-stripe');
         for (var notch of notches)
             container.removeChild(notch);
         // Add notches
-        for (var i = -135; i < 136; i += 3) {
+        for (var i = -132; i < 133; i += 3) {
             var div = document.createElement('div');
             div.classList.add('notch');
             var width = container.getBoundingClientRect().width;
             div.style.webkitTransform = 
                 `rotate(${i}deg) translate(0, -${Math.floor(width/2)}px)`;
-            if (i > 0) div.style.borderLeftColor = '#333';
+            if (i > degree) div.style.borderLeftColor = '#333';
             container.appendChild(div);
         }
     }
 }
 
-function checkNotches(lower) {
+function setIconValue(value) {
+    var icon = document.getElementById('modal-icon');
+    if (value > 0)
+        icon.innerHTML = `+${value}`;
+    else icon.innerHTML = value;
+}
+
+function checkNotches() {
     var notches = document.getElementsByClassName('notch');
-    var tick = document.getElementById('tick-tick');
-    for (var notch of notches) {
-        if (collide(tick, notch)) {
-            if (lower)
+    var slider = document.getElementsByClassName('round-slider')[0];
+    if (slider.style.webkitTransform && slider.style.webkitTransform.indexOf('rotate') > -1) {
+        var sliderAngle = getTransformAngle(slider);
+        for (var notch of notches) {
+            var notchAngle = getTransformAngle(notch);
+            if (notchAngle > sliderAngle)
                 notch.style.borderLeftColor = '#333';
             else
                 notch.style.borderLeftColor = 'orange';
@@ -112,11 +136,10 @@ function checkNotches(lower) {
     }
 }
 
-function collide(el1, el2) {
-    var first = el1.getBoundingClientRect();
-    var second = el2.getBoundingClientRect();
-    return !((first.bottom < second.top) ||
-             (first.top > second.bottom) ||
-             (first.right < second.left) ||
-             (first.left > second.right))
-};
+function getTransformAngle(element) {
+    return parseFloat(element.style.webkitTransform.match(/\-*\d+\.*\d*/g)[0]);
+}
+
+function map (num, in_min, in_max, out_min, out_max) {
+    return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
