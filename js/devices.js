@@ -35,24 +35,25 @@ export function addDevicesScroll() {
 
 export function addFilter() {
     var filters = document.getElementsByClassName('filter')[0].getElementsByTagName('p');
-    for (var filter of filters) {
+    for (var i = 0; i < filters.length; i++) {
+        var filter = filters[i];
         if (!filter.onclick)
             filter.onclick = function($event) {
                 var mfilters = document.getElementsByClassName('filter')[0].getElementsByTagName('p');
                 if ($event.target.classList.contains('active-filter')) {
                     if (isMobile()) {
-                        for (var mfilter of mfilters)
-                            mfilter.style.display = 'block';
+                        for (var i = 0; i < mfilters.length; i++)
+                            mfilters[i].style.display = 'block';
                         document.getElementsByClassName('active-filter')[0]
                             .classList.remove('active-filter');
                     }
                 } else {
                     var active = document.getElementsByClassName('active-filter')[0];
                     if (active) active.classList.remove('active-filter');
-                    for (var mfilter of mfilters)
-                        if (mfilter !== $event.target)
-                            mfilter.style.display = 'none';
-                        else mfilter.style.display = 'block';
+                    for (var i = 0; i < mfilters.length; i++)
+                        if (mfilters[i] !== $event.target)
+                            mfilters[i].style.display = 'none';
+                        else mfilters[i].style.display = 'block';
                     $event.target.classList.add('active-filter');
                 }
             }

@@ -9,9 +9,9 @@ export function generateModal() {
     // Find all devices and listen for modal to open
     var devices = document.getElementById('dev-container')
         .getElementsByClassName('tile');
-    for (var device of devices) 
-        if (!device.onclick)
-            device.onclick = renderTemplate;
+    for (var i = 0; i < devices.length; i++) 
+        if (!devices[i].onclick)
+            devices[i].onclick = renderTemplate;
 }
 
 function renderTemplate($event) {

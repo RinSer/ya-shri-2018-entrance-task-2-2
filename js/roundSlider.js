@@ -99,8 +99,8 @@ export function addNotches(iconValue = 23) {
         slider.style.webkitTransform = "rotate(" + (degree) + "deg)";
         // Remove notches if they are
         var notches = container.getElementsByClassName('round-stripe');
-        for (var notch of notches)
-            container.removeChild(notch);
+        for (var i = 0; i < notches.length; i++)
+            container.removeChild(notches[i]);
         // Add notches
         for (var i = -132; i < 133; i += 3) {
             var div = document.createElement('div');
@@ -126,7 +126,8 @@ function checkNotches() {
     var slider = document.getElementsByClassName('round-slider')[0];
     if (slider.style.webkitTransform && slider.style.webkitTransform.indexOf('rotate') > -1) {
         var sliderAngle = getTransformAngle(slider);
-        for (var notch of notches) {
+        for (var i = 0; i < notches.length; i++) {
+            var notch = notches[i];
             var notchAngle = getTransformAngle(notch);
             if (notchAngle > sliderAngle)
                 notch.style.borderLeftColor = '#333';

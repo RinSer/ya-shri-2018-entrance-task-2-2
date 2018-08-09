@@ -2,9 +2,9 @@ import { isMobile } from './utils.js';
 
 export function sliderFilter(setIcon = false) {
     var filters = document.getElementById('slider-filter').getElementsByTagName('p');
-    for (var filter of filters)
-        if (!filter.onclick) {
-            filter.onclick = function($event) {
+    for (var i = 0; i < filters.length; i++)
+        if (!filters[i].onclick) {
+            filters[i].onclick = function($event) {
                 // Change slider
                 var value = $event.target.getAttribute('data-value');
                 if (value) {
